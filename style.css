@@ -1,0 +1,305 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: auto;
+	background-color: #1f222a;
+}
+.nav-header{
+	padding: 1em;
+}
+.nav-header ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+.nav-header ul li a{
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+.nav-header ul:hover{
+	padding: .2em;
+}
+.nav-header ul li:hover{
+	border-top: 1px solid tan;
+	border-bottom: 1px solid tan;
+}
+.nav-header a:hover{
+	background-color: tan;
+	color: #000;
+	font-size: 1.3em;
+}
+
+.slider-con{
+	width: 100%;
+	min-height: 600px;
+	margin-top: 4.5em;
+	overflow: hidden;
+	opacity: .8;
+}
+
+.slider{
+	width: 600%;
+	min-height: 600px;
+	animation:  slider  infinite 60s 1.5s;
+
+}
+.slider-image{
+	
+	width: 16.666%;
+	min-height: 600px;
+	float: left;
+ }
+.slider img{
+	position: absolute;
+	left: 0;
+	top: .5em;
+	width: 150px;
+	height: 200px;
+	margin: 18em 5em 0;
+	transform: skew(160deg, 10deg );
+}
+.slider-image p{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1f222a;
+	color: white;
+	width: 300px;
+	height: 150px;
+	font-size: 1.5em;
+	border-radius: 20px;
+	text-align: center;
+	margin: 0em 1.5em 0;
+	
+}
+
+.slider .btn{
+	position: absolute;
+	left: 8em;
+	top: 10em;
+	margin: 12em 8em 0;
+	padding: 0 5px;
+	width: 8em;
+	height: 8em;
+	font-size: 1em;
+	border-style: none;
+	border-radius: 50%;
+	background-color: tan
+}
+.slider .btn i{
+	font-size:1.5em;
+	margin-left: 10px;
+}
+
+
+ /* Laptop/Desktop screen styles */
+@media screen and (min-width: 800px){
+	
+.slider img{
+	left: 10em;
+	top: 0;
+	height: 350px;
+	width: auto;	
+  }
+.slider-image p{
+	width: 500px;
+	height: 150px;
+	margin: 0em 5em 0;
+  }
+  .slider .btn{
+	left: 25em;
+	top: 5em;
+	width: 10em;
+	height: 10em;
+	margin: 18em 15em 0;
+  }
+}
+
+.slider-image:nth-child(1){
+	background: url('IMAGES/1.jpg') no-repeat;
+	background-size: cover;
+}
+.slider-image:nth-child(2){
+	background: url('IMAGES/2.jpg') no-repeat;
+	background-size: cover;
+}
+.slider-image:nth-child(3){
+	background: url('IMAGES/3.jpg') no-repeat;
+	background-size: cover;
+}
+.slider-image:nth-child(4){
+	background: url('IMAGES/4.jpg') no-repeat;
+	background-size: cover;
+}
+.slider-image:nth-child(5){
+	background: url('IMAGES/5.jpg') no-repeat;
+	background-size: cover;
+}
+.slider-image:nth-child(6){
+	background: url('IMAGES/1.jpg') no-repeat;
+	background-size: cover;
+}
+@keyframes slider{
+	20%{
+		margin-left: -100%;
+	}
+	
+	40%{
+		margin-left: -200%;
+	}
+	
+	60%{
+		margin-left: -300%;
+	}
+	
+	80%{
+		margin-left: -400%;
+	}
+	100%{
+		margin-left: -500%;
+	}
+
+
+}
+.btn{
+	text-transform: uppercase;
+	background-size: 5px;
+
+}
+section{
+	margin: 2em 0;
+	padding: 0px;
+	
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+p{
+	margin: 1em;
+	font-size: 1.2em;
+}
+h2{
+	text-align: center;
+	margin: 20px;
+}
+h4{
+	font-size: 1.5em;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	padding: .2em;
+}
+.icon {
+	font-size: 3em;
+	margin-left: .8em;
+	color: tan;
+}
+#overview {
+	/*background-color: rgba(245, 245, 245,.7);*/
+	background-color: tan;
+}
+#overview h2, #overview p{
+	text-align: center;
+	margin: 20px;
+	padding-top: 10px;
+}
+.overView{
+	display: flex;
+	flex-direction: column;
+	
+}
+.overView div{
+	background-color: #fff;
+	height: auto;
+	width: 300px;
+	margin: 10px auto;
+	padding: 10px;
+	text-align: center;
+}
+@media screen and (min-width: 800px){
+	.overView{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-template-rows: auto auto;
+		margin: 20px;
+	}
+	.overView div{
+		height: auto;
+		width: auto;
+		margin: 10px;
+		padding: 10px;
+	}
+}
+
+.overView div i{
+	font-size: 3em;
+	margin: 0 .5em .5em;
+	color: tan;
+}
+
+#about img{
+	width: 12em;
+	height: 15em;
+	float: left;
+	margin: 0 20px 20px;
+}
+
+#contact{
+	background-color: rgb(245, 245, 245);
+	
+}
+.form{
+	padding: 5px;
+	border-radius: 10px;
+	height: 100%;
+	width: 70%;
+	margin: 5em auto;
+}
+
+input, textarea{
+	width: 80%;
+	padding: 10px;
+	margin: 5px 20px;
+	border-radius: 15px;
+}
+input:focus, textarea:focus{
+	outline: none;
+	border: 1px solid tan;
+}
+.submit{
+	background-color: tan;
+	width: 70%;
+	color: snow;
+	font-size: 24px;
+	cursor: pointer;
+}
+@media screen and (min-width: 800px){
+	.submit{
+		width: 80%;
+	}
+}
+footer{
+	background-color: #1f222a;
+	width: 100%;
+	color: #fff;
+	font-size: 1.1em;
+	padding: 1em;
+}
+
+footer ul, footer p{
+	width: 40%;
+	margin: 1em auto;
+}
